@@ -1,0 +1,26 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: test
+  redis:
+    timeout: ${redis.timeout}
+    host: ${redis.host}
+    port: ${redis.port}
+    password: ${redis.password}
+    database: ${redis.database}
+    lettuce:
+      pool:
+        max-active: 150
+        max-idle: 50
+        min-idle: 10
+---
+redis:
+  timeout: 2000ms
+  host: redis.lawyer5.cn
+  port: 6379
+  password: xqg0713
+  database: 0
+wx:
+  appID: wx96245a866557315a
+  appSecret: c8d48f9945e5147545cd92dd3893c082
